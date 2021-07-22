@@ -12,10 +12,11 @@ const errors = require('../network/errors');
 const app = express();
 
 
-// expres ya puede interpretar los json y se utiliza esta linea en vez de intalar body-parser
+// express ya puede interpretar los json y se utiliza esta linea en vez de intalar body-parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// swagger
 const swaggerDoc = require('./swagget.json')
 
 //ROUTER
