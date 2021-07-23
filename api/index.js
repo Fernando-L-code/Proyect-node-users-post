@@ -6,7 +6,7 @@ const config = require('../config.js');
 
 const user = require('./components/user/network');
 const auth = require('./components/auth/network');
-const post = require('./components/post/network');
+// const post = require('./components/post/network');
 const errors = require('../network/errors');
 
 const app = express();
@@ -22,7 +22,8 @@ const swaggerDoc = require('./swagget.json')
 //ROUTER
 app.use('/api/user', user);
 app.use('/api/auth', auth);
-app.use('/api/post', post);
+//quitamos post para crearle su propio mibro servicio
+// app.use('/api/post', post);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc))
 
 app.use(errors);
